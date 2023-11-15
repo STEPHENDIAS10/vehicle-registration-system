@@ -48,8 +48,6 @@ class LogInContainer extends Component {
       .logIn(role, { email, password })
       .then(response => {
         const { user, token } = response.data;
-        console.log("this ", email, password );
-
         localStorage.setItem('token', token);
         setUser({ user });
       })
