@@ -1,4 +1,4 @@
-# Campus Recruitment System
+# Vehicle-Registration-System
 
 A recruiting software built with [React](https://reactjs.org)/[Redux](https://redux.js.org) (Client), [Node](https://nodejs.org)/[Express](https://expressjs.com) (API), and [MongoDB](https://www.mongodb.com) (Database).
 
@@ -7,7 +7,7 @@ A recruiting software built with [React](https://reactjs.org)/[Redux](https://re
 To get a local copy of the code, clone it using git:
 
 ```
-git clone https://github.com//vehicle-registration-system.git
+git clone https://github.com/STEPHENDIAS10/vehicle-registration-system.git
 cd vehicle-registration-system
 ```
 
