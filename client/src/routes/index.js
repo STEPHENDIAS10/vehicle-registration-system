@@ -45,7 +45,7 @@ const AppRoutes = () => {
         element={<PublicRoute component={LogInContainer} />}
       />
       <Route
-        path={ROUTES.LOG_IN_STUDENT}
+        path={ROUTES.LOG_IN_USER}
         element={<PublicRoute component={LogInContainer} />}
       />
       <Route

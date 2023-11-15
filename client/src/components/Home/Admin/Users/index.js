@@ -9,7 +9,7 @@ const Users = ({
   Users,
   handleDelete,
   isProcessing,
-  selectedStudentId,
+  selectedUserId,
 }) => {
   return (
     <Container>
@@ -43,10 +43,10 @@ const Users = ({
                       data-id={User._id}
                       onClick={handleDelete}
                       disabled={
-                        isProcessing && User._id === selectedStudentId
+                        isProcessing && User._id === selectedUserId
                       }
                     >
-                      {isProcessing && User._id === selectedStudentId
+                      {isProcessing && User._id === selectedUserId
                         ? 'Deleting...'
                         : 'Delete'}
                     </Button>
@@ -65,7 +65,7 @@ Users.propTypes = {
   Users: PropTypes.array.isRequired,
   handleDelete: PropTypes.func.isRequired,
   isProcessing: PropTypes.bool.isRequired,
-  selectedStudentId: PropTypes.string.isRequired,
+  selectedUserId: PropTypes.string.isRequired,
 };
 
 export default Users;

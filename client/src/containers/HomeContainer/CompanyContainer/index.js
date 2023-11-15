@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Company from '../../../components/Home/Company/Lazy';
-import StudentsContainer from './StudentsContainer/Lazy';
+import UsersContainer from './UsersContainer/Lazy';
 import JobsContainer from './JobsContainer/Lazy';
 import NewContainer from './JobsContainer/NewContainer/Lazy';
 import ProfileContainer from './ProfileContainer/Lazy';
@@ -14,7 +14,7 @@ class CompanyContainer extends Component {
     return (
       <Routes>
         <Route index element={<Company />} />
-        <Route path="students" element={<StudentsContainer />} />
+        <Route path="users" element={<UsersContainer />} />
         <Route path="jobs" element={<JobsContainer />} />
         <Route path="jobs/new" element={<NewContainer />} />
         <Route path="profile" element={<ProfileContainer />} />

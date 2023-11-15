@@ -25,7 +25,7 @@ const LogInType = () => {
                 Company
               </Button>
             </LinkContainer>
-            <LinkContainer to={ROUTES.LOG_IN_STUDENT}>
+            <LinkContainer to={ROUTES.LOG_IN_USER}>
               <Button variant="light" size="lg">
                 User
               </Button>

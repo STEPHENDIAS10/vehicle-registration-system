@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { USER } = require('../constants/roles');
 
-const StudentSchema = mongoose.Schema({
+const UserSchema = mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -33,4 +33,4 @@ const StudentSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Students', StudentSchema);
+module.exports = mongoose.model('Users', UserSchema);

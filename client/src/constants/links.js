@@ -25,8 +25,8 @@ const ADMIN_LINKS = [
     text: 'Companies',
   },
   {
-    path: ROUTES.STUDENTS,
-    text: 'Students',
+    path: ROUTES.USER,
+    text: 'Users',
   },
   {
     path: ROUTES.JOBS,
@@ -44,8 +44,8 @@ const COMPANY_LINKS = [
     text: 'Home',
   },
   {
-    path: ROUTES.STUDENTS,
-    text: 'Students',
+    path: ROUTES.USERS,
+    text: 'Users',
   },
   {
     path: ROUTES.JOBS,
@@ -57,7 +57,7 @@ const COMPANY_LINKS = [
   },
 ];
 
-const STUDENT_LINKS = [
+const USER_LINKS = [
   {
     path: ROUTES.HOME,
     text: 'Home',
@@ -76,4 +76,4 @@ const STUDENT_LINKS = [
   },
 ];
 
-export { PUBLIC_LINKS, ADMIN_LINKS, COMPANY_LINKS, STUDENT_LINKS };
+export { PUBLIC_LINKS, ADMIN_LINKS, COMPANY_LINKS, USER_LINKS };

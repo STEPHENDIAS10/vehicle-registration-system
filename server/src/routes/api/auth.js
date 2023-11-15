@@ -19,9 +19,9 @@ router.post('/signup/:role', async (req, res) => {
 
   const isEmailExistInAdmins = await Admin.findOne({ email });
   const isEmailExistInCompanies = await Company.findOne({ email });
-  const isEmailExistInStudents = await User.findOne({ email });
+  const isEmailExistInUsers = await User.findOne({ email });
 
-  if (isEmailExistInAdmins || isEmailExistInCompanies || isEmailExistInStudents)
+  if (isEmailExistInAdmins || isEmailExistInCompanies || isEmailExistInUsers)
     return res.status(400).send({
       message: 'The email address is already in use by another account.',
     });

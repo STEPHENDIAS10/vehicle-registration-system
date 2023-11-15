@@ -37,7 +37,7 @@ class LogInContainer extends Component {
       case ROUTES.LOG_IN_COMPANY:
         role = ROLES.COMPANY;
         break;
-      case ROUTES.LOG_IN_STUDENT:
+      case ROUTES.LOG_IN_USER:
         role = ROLES.USER;
         break;
       default:
@@ -48,6 +48,7 @@ class LogInContainer extends Component {
       .logIn(role, { email, password })
       .then(response => {
         const { user, token } = response.data;
+        console.log("this ", email, password );
 
         localStorage.setItem('token', token);
         setUser({ user });

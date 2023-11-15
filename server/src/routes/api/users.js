@@ -11,7 +11,7 @@ router.get('/', authorization, (req, res) => {
     return res.status(401).send({ message: 'Access denied.' });
 
   User.find({})
-    .then(students => res.status(200).send(students))
+    .then(users => res.status(200).send(users))
     .catch(error => res.status(400).send({ message: error.message }));
 });
 

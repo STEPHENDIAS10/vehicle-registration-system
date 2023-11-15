@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const authRouter = require('./routes/api/auth');
 const companiesRouter = require('./routes/api/companies');
-const studentsRouter = require('./routes/api/students');
+const usersRouter = require('./routes/api/users');
 const jobsRouter = require('./routes/api/jobs');
 const profileRouter = require('./routes/api/profile');
 
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/user', authRouter);
 app.use('/api/companies', companiesRouter);
-app.use('/api/students', studentsRouter);
+app.use('/api/users', usersRouter);
 app.use('/api/jobs', jobsRouter);
 app.use('/api/profile', profileRouter);
 

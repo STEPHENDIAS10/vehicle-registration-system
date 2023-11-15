@@ -5,10 +5,10 @@ const SIGN_UP_USER = '/signup/User';
 const LOG_IN = '/login';
 const LOG_IN_ADMIN = '/login/admin';
 const LOG_IN_COMPANY = '/login/company';
-const LOG_IN_STUDENT = '/login/User';
+const LOG_IN_USER = '/login/User';
 const HOME = '/home';
 const COMPANIES = '/home/companies';
-const STUDENTS = '/home/students';
+const USERS = '/home/users';
 const JOBS = '/home/jobs';
 const JOBS_NEW = '/home/jobs/new';
 const PROFILE = '/home/profile';
@@ -22,10 +22,10 @@ export {
   LOG_IN,
   LOG_IN_ADMIN,
   LOG_IN_COMPANY,
-  LOG_IN_STUDENT,
+  LOG_IN_USER,
   HOME,
   COMPANIES,
-  STUDENTS,
+  USERS,
   JOBS,
   JOBS_NEW,
   PROFILE,

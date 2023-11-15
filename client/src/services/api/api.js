@@ -25,18 +25,18 @@ class API {
       headers: { 'Auth-Token': localStorage.getItem('token') },
     });
 
-  getStudents = () =>
-    axios.get('/api/students', {
+  getUsers = () =>
+    axios.get('/api/users', {
       headers: { 'Auth-Token': localStorage.getItem('token') },
     });
 
-  getStudent = id =>
-    axios.get(`/api/students/${id}`, {
+  getUser = id =>
+    axios.get(`/api/users/${id}`, {
       headers: { 'Auth-Token': localStorage.getItem('token') },
     });
 
-  deleteStudent = id =>
-    axios.delete(`/api/students/${id}`, {
+  deleteUser = id =>
+    axios.delete(`/api/users/${id}`, {
       headers: { 'Auth-Token': localStorage.getItem('token') },
     });
 
