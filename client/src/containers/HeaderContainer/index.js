@@ -20,7 +20,7 @@ class HeaderContainer extends Component {
         {user && user.role === ROLES.COMPANY && (
           <Header links={LINKS.COMPANY_LINKS} isAuthenticated={true} />
         )}
-        {user && user.role === ROLES.STUDENT && (
+        {user && user.role === ROLES.USER && (
           <Header links={LINKS.STUDENT_LINKS} isAuthenticated={true} />
         )}
       </>

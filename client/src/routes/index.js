@@ -29,7 +29,7 @@ const AppRoutes = () => {
         element={<PublicRoute component={SignUpContainer} />}
       />
       <Route
-        path={ROUTES.SIGN_UP_STUDENT}
+        path={ROUTES.SIGN_UP_USER}
         element={<PublicRoute component={SignUpContainer} />}
       />
       <Route

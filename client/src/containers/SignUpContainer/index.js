@@ -36,8 +36,8 @@ class SignUpContainer extends Component {
       case ROUTES.SIGN_UP_COMPANY:
         role = ROLES.COMPANY;
         break;
-      case ROUTES.SIGN_UP_STUDENT:
-        role = ROLES.STUDENT;
+      case ROUTES.SIGN_UP_USER:
+        role = ROLES.USER;
         break;
       default:
         break;

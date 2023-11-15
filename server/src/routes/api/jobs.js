@@ -4,7 +4,7 @@ const authorization = require('../../middlewares/authorization');
 
 const Job = require('../../models/Job');
 
-const { COMPANY, STUDENT } = require('../../constants/roles');
+const { COMPANY, USER } = require('../../constants/roles');
 
 router.get('/', authorization, (req, res) => {
   const { _id, role } = req.user;
@@ -54,7 +54,7 @@ router.get('/:id', authorization, (req, res) => {
 router.patch('/:id/apply', authorization, (req, res) => {
   const { _id, role } = req.user;
 
-  if (role !== STUDENT)
+  if (role !== USER)
     return res.status(401).send({ message: 'Access denied.' });
 
   Job.findById(req.params.id)
@@ -72,7 +72,7 @@ router.patch('/:id/apply', authorization, (req, res) => {
 router.delete('/:id', authorization, (req, res) => {
   const { _id, role } = req.user;
 
-  if (role === STUDENT)
+  if (role === USER)
     return res.status(401).send({ message: 'Access denied.' });
 
   if (role === COMPANY)

@@ -4,7 +4,7 @@ import * as ROLES from '../../constants/roles';
 
 import AdminContainer from './AdminContainer/Lazy';
 import CompanyContainer from './CompanyContainer/Lazy';
-import StudentContainer from './StudentContainer/Lazy';
+import UserContainer from './UserContainer/Lazy';
 
 class HomeContainer extends Component {
   render() {
@@ -14,7 +14,7 @@ class HomeContainer extends Component {
       <>
         {user.role === ROLES.ADMIN && <AdminContainer />}
         {user.role === ROLES.COMPANY && <CompanyContainer />}
-        {user.role === ROLES.STUDENT && <StudentContainer />}
+        {user.role === ROLES.USER && <UserContainer />}
       </>
     );
   }

@@ -4,9 +4,9 @@ const authorization = require('../../middlewares/authorization');
 
 const Admin = require('../../models/Admin');
 const Company = require('../../models/Company');
-const Student = require('../../models/Student');
+const User = require('../../models/User');
 
-const { ADMIN, COMPANY, STUDENT } = require('../../constants/roles');
+const { ADMIN, COMPANY, USER } = require('../../constants/roles');
 
 router.get('/', authorization, (req, res) => {
   const { _id, role } = req.user;
@@ -31,8 +31,8 @@ router.get('/', authorization, (req, res) => {
       })
       .catch(error => res.status(400).send({ message: error.message }));
 
-  if (role === STUDENT)
-    return Student.findById(_id)
+  if (role === USER)
+    return User.findById(_id)
       .then(data => {
         const user = data.toObject();
         delete user.password;
@@ -43,7 +43,7 @@ router.get('/', authorization, (req, res) => {
 });
 
 router.get('/:id', authorization, (req, res) => {
-  Student.findById(req.params.id)
+  User.findById(req.params.id)
     .then(data => {
       const user = data.toObject();
       delete user.password;
@@ -77,8 +77,8 @@ router.patch('/', authorization, (req, res) => {
       .then(success => res.status(200).send(success.nModified))
       .catch(error => res.status(400).send({ message: error.message }));
 
-  if (role === STUDENT)
-    return Student.updateOne({ _id }, { $set: { firstName, lastName, phone } })
+  if (role === USER)
+    return User.updateOne({ _id }, { $set: { firstName, lastName, phone } })
       .then(success => res.status(200).send(success.nModified))
       .catch(error => res.status(400).send({ message: error.message }));
 });

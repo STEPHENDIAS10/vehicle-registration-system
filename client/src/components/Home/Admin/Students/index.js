@@ -5,8 +5,8 @@ import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
-const Students = ({
-  students,
+const Users = ({
+  Users,
   handleDelete,
   isProcessing,
   selectedStudentId,
@@ -15,7 +15,7 @@ const Students = ({
     <Container>
       <Card className="shadow-sm">
         <Card.Header as="h2" className="text-center">
-          Students
+          Customer
         </Card.Header>
         <Card.Body>
           <Table bordered hover>
@@ -30,23 +30,23 @@ const Students = ({
               </tr>
             </thead>
             <tbody>
-              {students.map((student, i) => (
+              {Users.map((User, i) => (
                 <tr key={i}>
                   <td>{i + 1}</td>
-                  <td>{student.firstName}</td>
-                  <td>{student.lastName}</td>
-                  <td>{student.email}</td>
-                  <td>{student.phone}</td>
+                  <td>{User.firstName}</td>
+                  <td>{User.lastName}</td>
+                  <td>{User.email}</td>
+                  <td>{User.phone}</td>
                   <td>
                     <Button
                       variant="danger"
-                      data-id={student._id}
+                      data-id={User._id}
                       onClick={handleDelete}
                       disabled={
-                        isProcessing && student._id === selectedStudentId
+                        isProcessing && User._id === selectedStudentId
                       }
                     >
-                      {isProcessing && student._id === selectedStudentId
+                      {isProcessing && User._id === selectedStudentId
                         ? 'Deleting...'
                         : 'Delete'}
                     </Button>
@@ -61,11 +61,11 @@ const Students = ({
   );
 };
 
-Students.propTypes = {
-  students: PropTypes.array.isRequired,
+Users.propTypes = {
+  Users: PropTypes.array.isRequired,
   handleDelete: PropTypes.func.isRequired,
   isProcessing: PropTypes.bool.isRequired,
   selectedStudentId: PropTypes.string.isRequired,
 };
 
-export default Students;
+export default Users;

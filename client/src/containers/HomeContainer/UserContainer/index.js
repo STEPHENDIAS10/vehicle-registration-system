@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Student from '../../../components/Home/Student/Lazy';
+import User from '../../../components/Home/User/Lazy';
 import CompaniesContainer from './CompaniesContainer/Lazy';
 import JobsContainer from './JobsContainer/Lazy';
 import ProfileContainer from './ProfileContainer/Lazy';
 import EditContainer from './ProfileContainer/EditContainer/Lazy';
 import NotFound from '../../../components/NotFound/Lazy';
 
-class StudentContainer extends Component {
+class UserContainer extends Component {
   render() {
     return (
       <Routes>
-        <Route index element={<Student />} />
+        <Route index element={<User />} />
         <Route path="companies" element={<CompaniesContainer />} />
         <Route path="jobs" element={<JobsContainer />} />
         <Route path="profile" element={<ProfileContainer />} />
@@ -23,4 +23,4 @@ class StudentContainer extends Component {
   }
 }
 
-export default StudentContainer;
+export default UserContainer;

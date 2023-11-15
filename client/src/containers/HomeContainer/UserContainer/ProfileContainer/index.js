@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Profile from '../../../../components/Home/Student/Profile';
+import Profile from '../../../../components/Home/User/Profile';
 
 class ProfileContainer extends Component {
   state = {

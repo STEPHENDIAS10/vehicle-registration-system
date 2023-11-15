@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { STUDENT } = require('../constants/roles');
+const { USER } = require('../constants/roles');
 
 const StudentSchema = mongoose.Schema({
   firstName: {
@@ -25,7 +25,7 @@ const StudentSchema = mongoose.Schema({
   },
   role: {
     type: String,
-    default: STUDENT,
+    default: USER,
   },
   createdAt: {
     type: Date,

@@ -1,5 +1,5 @@
 const ADMIN = 'admin';
 const COMPANY = 'company';
-const STUDENT = 'student';
+const USER = 'User';
 
-export { ADMIN, COMPANY, STUDENT };
+export { ADMIN, COMPANY, USER };

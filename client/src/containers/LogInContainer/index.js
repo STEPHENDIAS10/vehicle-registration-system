@@ -38,7 +38,7 @@ class LogInContainer extends Component {
         role = ROLES.COMPANY;
         break;
       case ROUTES.LOG_IN_STUDENT:
-        role = ROLES.STUDENT;
+        role = ROLES.USER;
         break;
       default:
         break;

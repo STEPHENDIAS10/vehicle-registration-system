@@ -4,12 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 
-const Students = ({ students }) => {
+const Users = ({ Users }) => {
   return (
     <Container>
       <Card className="shadow-sm">
         <Card.Header as="h2" className="text-center">
-          Students
+          Users
         </Card.Header>
         <Card.Body>
           <Table bordered hover>
@@ -23,13 +23,13 @@ const Students = ({ students }) => {
               </tr>
             </thead>
             <tbody>
-              {students.map((student, i) => (
+              {Users.map((User, i) => (
                 <tr key={i}>
                   <td>{i + 1}</td>
-                  <td>{student.firstName}</td>
-                  <td>{student.lastName}</td>
-                  <td>{student.email}</td>
-                  <td>{student.phone}</td>
+                  <td>{User.firstName}</td>
+                  <td>{User.lastName}</td>
+                  <td>{User.email}</td>
+                  <td>{User.phone}</td>
                 </tr>
               ))}
             </tbody>
@@ -40,8 +40,8 @@ const Students = ({ students }) => {
   );
 };
 
-Students.propTypes = {
-  students: PropTypes.array.isRequired,
+Users.propTypes = {
+  Users: PropTypes.array.isRequired,
 };
 
-export default Students;
+export default Users;

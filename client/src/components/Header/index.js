@@ -23,7 +23,7 @@ const Header = ({ links, isAuthenticated }) => {
               className="d-inline-block align-top"
               src={logo}
               width="30"
-              height="30"
+              height="50"
               alt="CRS"
             />
           </Navbar.Brand>

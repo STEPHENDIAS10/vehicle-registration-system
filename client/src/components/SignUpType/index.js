@@ -20,9 +20,9 @@ const SignUpType = () => {
                 Company
               </Button>
             </LinkContainer>
-            <LinkContainer to={ROUTES.SIGN_UP_STUDENT}>
+            <LinkContainer to={ROUTES.SIGN_UP_USER}>
               <Button variant="light" size="lg">
-                Student
+                User
               </Button>
             </LinkContainer>
           </div>
