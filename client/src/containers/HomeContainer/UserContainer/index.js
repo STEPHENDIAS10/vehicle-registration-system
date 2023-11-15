@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import User from '../../../components/Home/User/Lazy';
+import User from '../../../components/Home/Users/Lazy';
 import CompaniesContainer from './CompaniesContainer/Lazy';
 import JobsContainer from './JobsContainer/Lazy';
 import ProfileContainer from './ProfileContainer/Lazy';

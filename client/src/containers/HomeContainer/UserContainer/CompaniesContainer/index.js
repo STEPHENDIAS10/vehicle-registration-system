@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withAPI } from '../../../../services/api';
 
-import Companies from '../../../../components/Home/User/Companies';
+import Companies from '../../../../components/Home/Users/Companies';
 
 class CompaniesContainer extends Component {
   state = { companies: [] };

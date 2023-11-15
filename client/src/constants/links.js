@@ -25,7 +25,7 @@ const ADMIN_LINKS = [
     text: 'Companies',
   },
   {
-    path: ROUTES.USER,
+    path: ROUTES.USERS,
     text: 'Users',
   },
   {

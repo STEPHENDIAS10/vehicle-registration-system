@@ -6,7 +6,7 @@ import { withAPI } from '../../../../../services/api';
 import withRouter from '../../../../../services/withRouter';
 import * as ROUTES from '../../../../../constants/routes';
 
-import Edit from '../../../../../components/Home/User/Profile/Edit';
+import Edit from '../../../../../components/Home/Users/Profile/Edit';
 
 class EditContainer extends Component {
   state = {

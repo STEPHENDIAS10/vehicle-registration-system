@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withAPI } from '../../../../services/api';
 
-import Jobs from '../../../../components/Home/User/Jobs';
+import Jobs from '../../../../components/Home/Users/Jobs';
 
 class JobsContainer extends Component {
   state = { jobs: [], isProcessing: false, selectedJobId: '' };
