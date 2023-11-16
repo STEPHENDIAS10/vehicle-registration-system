@@ -4,7 +4,7 @@ const validateLogIn = data => {
   const schema = Joi.object({
     email: Joi.string().email({ minDomainSegments: 2 }).required(),
     password: Joi.string()
-      .pattern(new RegExp('^[a-zA-Z0-9]{6,64}$'))
+      .pattern(new RegExp('^[a-zA-Z0-9@]{8}$'))
       .required(),
   });
 
