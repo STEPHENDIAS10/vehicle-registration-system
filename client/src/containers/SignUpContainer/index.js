@@ -44,20 +44,21 @@ class SignUpContainer extends Component {
     }
 
     api
-      .signUp(role, { firstName, lastName, email, password })
-      .then(response => {
-        const { user, token } = response.data;
+    .signUp(role, { firstName, lastName, email, password })
+    .then(response => {
+      const { user, token } = response.data;
 
-        localStorage.setItem('token', token);
-        setUser({ user });
-      })
-      .catch(error =>
-        this.setState({
-          isProcessing: false,
-          error: error.response.data.message,
-        })
-      );
-  };
+      localStorage.setItem('token', token);
+      setUser({ user });
+    })
+    .catch(error => {
+      console.error("Sign-up failed:", error);
+      this.setState({
+        isProcessing: false,
+        error: error.response.data.message,
+      });
+    });
+};
 
   dismissAlert = () => this.setState({ error: null });
 

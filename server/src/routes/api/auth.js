@@ -5,9 +5,9 @@ const jwt = require('jsonwebtoken');
 
 const Admin = require('../../models/Admin');
 const Company = require('../../models/Company');
-const User = require('../../models/User');
+const Student_User = require('../../models/User');
 
-const { ADMIN, COMPANY, USER } = require('../../constants/roles');
+const { ADMIN, COMPANY, STUDENT } = require('../../constants/roles');
 const { validateSignUp, validateLogIn } = require('../../validation');
 
 router.post('/signup/:role', async (req, res) => {
@@ -19,7 +19,7 @@ router.post('/signup/:role', async (req, res) => {
 
   const isEmailExistInAdmins = await Admin.findOne({ email });
   const isEmailExistInCompanies = await Company.findOne({ email });
-  const isEmailExistInUsers = await User.findOne({ email });
+  const isEmailExistInUsers = await Student_User.findOne({ email });
 
   if (isEmailExistInAdmins || isEmailExistInCompanies || isEmailExistInUsers)
     return res.status(400).send({
@@ -49,16 +49,16 @@ router.post('/signup/:role', async (req, res) => {
       })
       .catch(error => res.status(400).send({ message: error.message }));
   } else if (role === USER) {
-    const User = new User({
+    const student = new Student_User({
       firstName,
       lastName,
       email: email,
       password: hash,
     });
 
-    const token = jwt.sign({ _id: User._id, role }, process.env.JWT_SECRET);
+    const token = jwt.sign({ _id: student._id, role }, process.env.JWT_SECRET);
 
-    User
+    student
       .save()
       .then(data => {
         const user = data.toObject();
@@ -114,7 +114,7 @@ router.post('/login/:role', async (req, res) => {
 
     res.status(200).send({ user: userData, token });
   } else if (role === USER) {
-    const user = await User.findOne({ email });
+    const user = await Student_User.findOne({ email });
 
     if (!user)
       return res.status(400).send({
